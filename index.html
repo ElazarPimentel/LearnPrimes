@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn and practice identifying prime numbers with this interactive educational game. Test your math skills with instant feedback and track your progress.">
+    <meta name="keywords" content="prime numbers, math game, number theory, educational game, math practice, prime number quiz">
+    <meta name="author" content="Learn Prime Numbers">
+    <meta property="og:title" content="Learn Prime Numbers - Interactive Math Practice">
+    <meta property="og:description" content="Practice identifying prime numbers with instant feedback and progress tracking. Perfect for students and math enthusiasts.">
+    <meta property="og:type" content="website">
+    <title>Learn Prime Numbers - Interactive Math Practice Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Is this number prime?</h1>
+    <div class="range-controls">
+        <label>
+            Range: 
+            <input type="number" id="min-number" value="1" min="1"> to 
+            <input type="number" id="max-number" value="200" min="1">
+            <button onclick="updateRange()">Update Range</button>
+        </label>
+    </div>
+    <div id="number"></div>
+    <div>
+        <button onclick="checkAnswer(true)"><u>Y</u>es, it's prime</button>
+        <button onclick="checkAnswer(false)"><u>N</u>o, it's not prime</button>
+    </div>
+    <div id="result"></div>
+    <div id="explanation"></div>
+    <button id="next-btn" onclick="newNumber()" style="display: none;">Next Number (<u>N</u>)</button>
+    <div class="feedback-container" id="feedback">
+        <!-- Feedback messages will appear here -->
+    </div>
+
+    <div class="stats-container">
+        <h2>🏆 Your Progress 🏆</h2>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-value" id="correct-count">0</div>
+                <div class="stat-label">✅ Correct</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="streak-count">0</div>
+                <div class="stat-label">🔥 Streak</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="total-count">0</div>
+                <div class="stat-label">📝 Total</div>
+            </div>
+        </div>
+        <div id="encouragement" class="encouragement"></div>
+    </div>
+
+    <div class="check-specific-container">
+        <h2>🔍 Check a Specific Number</h2>
+        <div class="check-specific-input">
+            <input type="number" id="specific-number" min="100" max="999" placeholder="Enter a 3-digit number">
+            <button onclick="checkSpecificNumber()">Check if Prime</button>
+        </div>
+        <div id="specific-result" class="specific-result"></div>
+    </div>
+    
+    <footer>
+        <p>Learn Prime Numbers - A fun way to practice prime number identification</p>
+        <p>Use keyboard shortcuts: <kbd>Y</kbd> for Yes, <kbd>N</kbd> for No</p>
+        <div class="seo-footer">
+            <p>Improve your mathematical skills by learning to identify prime numbers through interactive practice. 
+            Perfect for students, teachers, and anyone interested in number theory.</p>
+            <p>A prime number is a natural number greater than 1 that is only divisible by 1 and itself. 
+            Practice with numbers from 1 to 200 and get instant feedback on your answers.</p>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
