@@ -143,12 +143,45 @@ h2 {
     color: #ffffff;
 }
 
+.content-footer {
+    margin: 2rem 0;
+    padding: 1rem;
+    color: #999999;
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 0.9rem;
+    background-color: #333333;
+    border-radius: 8px;
+}
+
 footer {
     margin-top: 2rem;
     padding: 1rem;
     border-top: 1px solid #666666;
     color: #cccccc;
     font-size: 0.9rem;
+    background-color: #1a1a1a;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+footer a {
+    color: #00ff00;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #00cc00;
+    text-decoration: underline;
+}
+
+.tribute {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #999999;
 }
 
 kbd {
