@@ -167,8 +167,8 @@ function checkSpecificNumber() {
     const number = parseInt(input.value);
 
     // Validate input
-    if (isNaN(number) || number < 100 || number > 999) {
-        resultDiv.innerHTML = '❌ Please enter a valid 3-digit number (100-999)';
+    if (isNaN(number) || number < 1 || number > 999) {
+        resultDiv.innerHTML = '❌ Please enter a valid number between 1 and 999';
         resultDiv.style.color = '#ff4444';
         return;
     }
